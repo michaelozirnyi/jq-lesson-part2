@@ -1,0 +1,407 @@
+@import 'variables';
+@import 'header';
+@import 'footer';
+@import 'helper-classes';
+
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;       /*Не применяется ко всей странице!!!!!!!!!!!!!*/
+}
+
+h1 {
+  font-size: 92px;
+  font-weight: 400;
+  line-height: 97px;
+}
+
+h2 {
+  font-size: 60px;
+  line-height: 30px;
+  font-weight: 700;
+}
+
+h3 {
+  color: black;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 60px;
+}
+
+h5 {
+  font-weight: 700;
+}
+
+
+
+.btn {
+  width: 182px;
+  height: 57px;
+  border-radius: 28px;
+  background-color: white;
+  text-transform: uppercase;
+
+  padding-left: 30px;
+  padding-right: 30px;
+  font-size: 18px;
+  font-weight: 700;
+  color: $black;
+}
+
+.btn-transp {
+
+  color: #fff;
+  border: 2px solid #3b3b3b;
+  background-color: transparent;
+  transition: 1s;
+  margin-top: 2vw;
+
+  &:hover {
+    color: $red;
+    border-color: honeydew;
+  }
+}
+
+
+/*----------Fly sections-----------*/
+.tap-fly {
+  display: block;
+  position: relative;
+  z-index: 3;
+
+  .tap-img {
+    /*min-width: 100%;
+    min-height: 100%;*/
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .circle {
+    position: absolute;
+    z-index: 4;
+    top: 3vw;
+    right: 0;
+    max-width: 13vw;
+    max-height: 27vw;
+  }
+
+  h2{
+    position: absolute;
+    z-index: 5;
+    top: 35%;
+    left: 9vw;
+  }
+
+  p {
+    top: 45%;
+    position: absolute;
+    z-index: 5;
+    left: 9vw;
+  }
+
+  &:hover {
+
+    .circle {
+      animation: circle-pulse 1s  infinite ease;
+    }
+  }
+}
+
+.fly-higher {
+  display: block;
+  position: relative;
+  z-index: 4;
+  padding: 0;
+
+  .darken {
+    display: block;
+    width: 24vw;
+    height: 100%;
+    background-color: $black;
+    opacity: 0.65;
+    position: absolute;
+    z-index: 6;
+    top: 0;
+    left: 0;
+    transition: 1s;
+  }
+
+  .fly-btn {
+
+    position: absolute;
+    z-index: 8;
+    transform: rotate(-90deg);
+    transition: .5s;
+
+    top: calc(15vw - 29px);
+    right: calc(15vw - 91px);
+  }
+
+  h2 {
+    display: block;
+    width: 380px;
+    position: absolute;
+    z-index: 7;
+    top: 10vw;
+    left: 5vw;
+    line-height: 65px;
+  }
+
+  &:hover {
+
+    .darken {
+      width: 33vw;
+    }
+
+    .fly-btn {
+      transform: rotate(0deg);
+    }
+  }
+
+  .road-img {
+    max-width: 100%;
+    max-height: 100%;
+    z-index: 5;
+  }
+}
+
+/*--------Feature section---------*/
+
+.feature {
+  text-align: center;
+  margin: 120px 0;
+
+  h3 {
+    margin-bottom: 120px;
+  }
+
+  p {
+    font-size: 30px;
+    font-weight: 400;
+  }
+
+  .icons {
+    margin-bottom: 60px;
+    max-width: 91px;
+    height: 91px;
+  }
+}
+
+.tehno:hover {
+
+  .icons {
+    transition: 2s;
+    transform: rotate(360deg);
+  }
+}
+
+/*!!!!!!!!!!!!!!!!!!!!Прописать анимвцию для антенки))))!!!!!!!!!!!!!!!!!*/
+
+.use:hover {
+
+  .icons {
+    animation: use 1s  1 linear;
+  }
+}
+
+.visibl:hover {
+
+  .icons {
+    transition: 1s;
+    animation: jump-visibl 1s  1 ease-out;
+  }
+}
+
+/*--------New generation of vision section---------*/
+.new-vis {
+  display: block;
+
+  .vision-img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+.gener {
+  position: relative;
+  z-index: 5;
+  background-color: $dark-gray;
+
+  h1 {
+    position: relative;
+    z-index: 7;
+    transition: 2s;
+  }
+
+  span {
+    color: $red;
+  }
+
+  .fon-dron {
+    position: absolute;
+    z-index: 6;
+    top: 2.5vw;
+    right: 0;
+    width: 15vw;
+    height: 27vw;
+  }
+}
+
+.hiden {
+  display: none;
+  position: relative;
+  z-index: 7;
+}
+
+.little-h1 {
+
+  h1 {
+    font-size: 30px;
+    line-height: 30px;
+  }
+}
+
+/*--------Generation of flying section---------*/
+
+.new-flying {
+padding-left: 50px;   /*Написать правильный ПАДИНГ!!!!!!!!!!!!!!!!!!!!!!!*/
+}
+
+.btn-prod {
+  border: 2px solid #eff2f6;
+  transition: 1s;
+  
+  &:hover {
+    border: 2px solid $black;
+    color: $red;
+  }
+}
+
+.fl-dron {
+  display: block;
+  padding-left: 50px;
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+/*------------Start section---------------*/
+
+.start {
+  display: block;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+
+  button {
+    color: $aqua;
+    transition: 1s;
+    border: 2px solid #fff;
+
+    &:hover{
+      @extend .btn-prod:hover;
+    }
+  }
+
+  /*!!!!!!!!!!!!!!Прописать стили для H1 and Button!!!!!!!!!!!!!!!!!!!!!!!!!*/
+}
+
+
+/*----------------------------------------------------------*/
+
+@media (min-width: 1200px) {
+
+}
+
+@media (max-width: 1199px) {
+
+  h1 {
+    font-size: 80px;
+    line-height: 80px;
+  }
+
+  h2 {
+    font-size: 40px;
+  }
+
+  .fly-higher h2 {
+    max-width: 300px;
+    line-height: 50px;
+  }
+}
+
+@media (max-width: 991px) {
+
+  h1 {
+    font-size: 37px;
+    line-height: 37px;
+  }
+
+  h2 {
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  .tap-fly p {
+    line-height: 20px;
+  }
+
+  .fly-higher h2 {
+    max-width: 225px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  h1 {
+    font-size: 45px;
+    line-height: 45px;
+  }
+
+  .tap-fly:hover {
+
+    .circle {
+      animation: circle-pulse-for-md 1s  infinite ease;
+    }
+  }
+
+  .tap-fly .circle {
+    top: 9vw;
+    right: 0;
+    max-width: 40vw;
+    max-height: 80vw;
+  }
+
+  .tap-fly h2{
+
+    font-size: 60px;
+    left: 40vw;
+  }
+
+  .tap-fly p {
+    left: 40vw;
+  }
+
+  .gener {
+   min-height: 400px;
+
+    .fon-dron {
+      top: 5vw;
+      width: 22vw;
+      height: 40vw;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+
+}
+
