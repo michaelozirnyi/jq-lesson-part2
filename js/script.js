@@ -16,7 +16,7 @@ jQuery(function ($) {
 
     $('#startBtn').on('click', function(){
         $(".absolut").addClass('little-h1');
-        $(".hiden-start").fadeIn(700);
+        $(".hiden-start").show(700);
 
     });
 
