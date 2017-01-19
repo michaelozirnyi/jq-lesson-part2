@@ -13,6 +13,8 @@ h1 {
   font-size: 92px;
   font-weight: 400;
   line-height: 97px;
+
+  transition: 2s;
 }
 
 h2 {
@@ -31,7 +33,6 @@ h3 {
 h5 {
   font-weight: 700;
 }
-
 
 
 .btn {
@@ -68,10 +69,9 @@ h5 {
   display: block;
   position: relative;
   z-index: 3;
+  background-color: #f8f9fb;
 
   .tap-img {
-    /*min-width: 100%;
-    min-height: 100%;*/
     max-width: 100%;
     max-height: 100%;
   }
@@ -113,6 +113,16 @@ h5 {
   z-index: 4;
   padding: 0;
 
+  h2 {
+    display: block;
+    width: 380px;
+    position: absolute;
+    z-index: 7;
+    top: 10vw;
+    left: 5vw;
+    line-height: 65px;
+  }
+
   .darken {
     display: block;
     width: 24vw;
@@ -126,26 +136,27 @@ h5 {
     transition: 1s;
   }
 
-  .fly-btn {
 
+  .fly-btn {
     position: absolute;
     z-index: 8;
     transform: rotate(-90deg);
     transition: .5s;
-
-    top: calc(15vw - 29px);
-    right: calc(15vw - 91px);
+    top: calc(16.5vw - 29px);
+    right: calc(16.5vw - 91px);
+    
+    &:before {
+      content: "";
+      position: absolute;
+      z-index: 8;
+      height: 1px;
+      width: calc(16.5vw - 91px - 15px);
+      background-color: #fff;
+      top: 28px;
+      right: 192px;
+    }
   }
 
-  h2 {
-    display: block;
-    width: 380px;
-    position: absolute;
-    z-index: 7;
-    top: 10vw;
-    left: 5vw;
-    line-height: 65px;
-  }
 
   &:hover {
 
@@ -160,7 +171,7 @@ h5 {
 
   .road-img {
     max-width: 100%;
-    max-height: 100%;
+    height: 33vw;
     z-index: 5;
   }
 }
@@ -195,7 +206,41 @@ h5 {
   }
 }
 
-/*!!!!!!!!!!!!!!!!!!!!Прописать анимвцию для антенки))))!!!!!!!!!!!!!!!!!*/
+.signal {
+  position: relative;
+  z-index: 5;
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 12px;
+    height: 12px;
+    background-color: transparent;
+    border: 3px solid $red;
+    opacity: .8;
+    border-radius: 50%;
+    top: calc(33px - 12px/2);
+    left: calc(50% - 12px/2);
+  }
+
+  &:hover:after {
+    animation: signal 1s  3 linear;
+  }
+}
+
+@keyframes signal {
+
+  100% {
+    opacity: 0;
+    border-radius: 50%;
+    width: 92px;
+    height: 92px;
+    top: calc(33px - 92px/2);
+    left: calc(50% - 92px/2);
+  }
+}
 
 .use:hover {
 
@@ -223,14 +268,15 @@ h5 {
 }
 
 .gener {
+  padding-left: 100px;
   position: relative;
   z-index: 5;
   background-color: $dark-gray;
 
   h1 {
+
     position: relative;
     z-index: 7;
-    transition: 2s;
   }
 
   span {
@@ -246,16 +292,18 @@ h5 {
     height: 27vw;
   }
 }
-
-.hiden {
+     /*---*/
+.hiden, .hiden-fly, .hiden-start{
   display: none;
   position: relative;
   z-index: 7;
+  font-weight: 400;
 }
 
 .little-h1 {
 
   h1 {
+    margin-top: 50px;
     font-size: 30px;
     line-height: 30px;
   }
@@ -264,7 +312,11 @@ h5 {
 /*--------Generation of flying section---------*/
 
 .new-flying {
-padding-left: 50px;   /*Написать правильный ПАДИНГ!!!!!!!!!!!!!!!!!!!!!!!*/
+  padding-left: 100px;   /*Написать правильный ПАДИНГ!!!!!!!!!!!!!!!!!!!!!!!*/
+
+  span {
+    color: $red;
+  }
 }
 
 .btn-prod {
@@ -288,7 +340,6 @@ padding-left: 50px;   /*Написать правильный ПАДИНГ!!!!!!
 }
 
 /*------------Start section---------------*/
-
 .start {
   display: block;
   position: relative;
@@ -300,27 +351,34 @@ padding-left: 50px;   /*Написать правильный ПАДИНГ!!!!!!
     max-height: 100%;
   }
 
+  .absolut {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 3;
+  }
+
+  h1 {
+    font-weight: 700;
+  }
 
   button {
     color: $aqua;
     transition: 1s;
     border: 2px solid #fff;
+    margin-top: 3vw;
+    margin-bottom: 10vw;
 
     &:hover{
       @extend .btn-prod:hover;
     }
   }
-
-  /*!!!!!!!!!!!!!!Прописать стили для H1 and Button!!!!!!!!!!!!!!!!!!!!!!!!!*/
 }
 
 
 /*----------------------------------------------------------*/
 
-@media (min-width: 1200px) {
-
-}
-
+/*-------@media--------*/
 @media (max-width: 1199px) {
 
   h1 {
@@ -336,8 +394,17 @@ padding-left: 50px;   /*Написать правильный ПАДИНГ!!!!!!
     max-width: 300px;
     line-height: 50px;
   }
+  .gener {
+    padding-left: 48px;
+  }
+
+
+
+
+
 }
 
+/*-------@media--------*/
 @media (max-width: 991px) {
 
   h1 {
@@ -357,8 +424,13 @@ padding-left: 50px;   /*Написать правильный ПАДИНГ!!!!!!
   .fly-higher h2 {
     max-width: 225px;
   }
+
+  .gener {
+    padding-left: 50px;
+  }
 }
 
+/*-------@media--------*/
 @media (max-width: 768px) {
 
   h1 {
@@ -366,32 +438,34 @@ padding-left: 50px;   /*Написать правильный ПАДИНГ!!!!!!
     line-height: 45px;
   }
 
-  .tap-fly:hover {
+  .tap-fly {
 
     .circle {
-      animation: circle-pulse-for-md 1s  infinite ease;
+      top: 8vh;
+      right: 0;
+      max-width: 250px;
+      max-height: 500px;
+    }
+
+    h2{
+      font-size: 60px;
+      left: 40vw;
+    }
+
+    p {
+      left: 40vw;
+    }
+
+    &:hover {
+
+      .circle {
+        animation: circle-pulse-for-md 1s  infinite ease;
+      }
     }
   }
 
-  .tap-fly .circle {
-    top: 9vw;
-    right: 0;
-    max-width: 40vw;
-    max-height: 80vw;
-  }
-
-  .tap-fly h2{
-
-    font-size: 60px;
-    left: 40vw;
-  }
-
-  .tap-fly p {
-    left: 40vw;
-  }
-
   .gener {
-   min-height: 400px;
+    min-height: 400px;
 
     .fon-dron {
       top: 5vw;
@@ -399,9 +473,45 @@ padding-left: 50px;   /*Написать правильный ПАДИНГ!!!!!!
       height: 40vw;
     }
   }
+
+  .fly-higher {
+
+    .darken {
+      width: 25vw;
+    }
+
+    &:hover .darken {
+      width: 50vw;
+    }
+
+    .fly-btn:before {
+      width: calc(31.5vw - 91px - 15px);
+    }
+
+    .road-img {
+      width: 100%;
+    }
+  }
 }
 
-@media (max-width: 500px) {
+/*-------@media--------*/
+@media (max-width: 576px) {
 
+  .tap-fly {
+
+    .circle {
+      top: 30px;
+      right: 0;
+      width: 150px;
+      height: 300px;
+    }
+
+    &:hover {
+
+      .circle {
+        animation: circle-pulse-for-sm 1s  infinite ease;
+      }
+    }
+  }
 }
 
