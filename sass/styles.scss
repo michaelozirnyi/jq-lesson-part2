@@ -13,7 +13,6 @@ h1 {
   font-size: 92px;
   font-weight: 400;
   line-height: 97px;
-
   transition: 2s;
 }
 
@@ -33,7 +32,6 @@ h3 {
 h5 {
   font-weight: 700;
 }
-
 
 .btn {
   width: 182px;
@@ -62,7 +60,6 @@ h5 {
     border-color: honeydew;
   }
 }
-
 
 /*----------Fly sections-----------*/
 .tap-fly {
@@ -136,7 +133,6 @@ h5 {
     transition: 1s;
   }
 
-
   .fly-btn {
     position: absolute;
     z-index: 8;
@@ -156,7 +152,6 @@ h5 {
       right: 192px;
     }
   }
-
 
   &:hover {
 
@@ -374,7 +369,6 @@ h5 {
     }
   }
 }
-
 
 /*----------------------------------------------------------*/
 
