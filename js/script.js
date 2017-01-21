@@ -1,12 +1,22 @@
 jQuery(function ($) {
 
+
+    $('.btn-menu').on('click', function(){
+        $(".menu-bar").toggleClass('toggl-menu');
+        $("body").toggleClass('place-menu');
+    });
+
+
+                  /*-----*/
+
+    var btnText = "View more",
+        newTextBtn = "Less";
+
     $('#visMore').on('click', function(){
         $(".gener").toggleClass('little-h1');
         $(".hiden").fadeIn(700);
 
-        var togBtn = $("#visMore").text(),
-            btnText = "View more",
-            newTextBtn = "Less";
+        var togBtn = $("#visMore").text();
 
         if (togBtn == btnText) {
             $("#visMore").text(newTextBtn);
@@ -15,16 +25,15 @@ jQuery(function ($) {
             $(".hiden").fadeOut(700);
         }
     });
-                     /*-----*/
 
+                   /*-----*/
 
     $('#new-gener').on('click', function(){
         $(".new-flying").toggleClass('little-h1');
         $(".hiden-fly").fadeIn(700);
 
         var togBtn = $("#new-gener").text(),
-            btnText = "Products",
-            newTextBtn = "Less";
+            btnText = "Products";
 
         if (togBtn == btnText) {
             $("#new-gener").text(newTextBtn);
@@ -40,9 +49,7 @@ jQuery(function ($) {
         $(".absolut").toggleClass('little-h1');
         $(".hiden-start").show(700);
 
-        var togBtn = $("#startBtn").text(),
-            btnText = "View more",
-            newTextBtn = "Less";
+        var togBtn = $("#startBtn").text();
 
         if (togBtn == btnText) {
             $("#startBtn").text(newTextBtn);
@@ -50,8 +57,5 @@ jQuery(function ($) {
             $("#startBtn").text(btnText);
             $(".hiden-start").fadeOut(700);
         }
-
     });
-
-
 });
