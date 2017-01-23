@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">   <!--Может здесь что-то не так?!!!!!-->
-                                                                    <!--На мобильных неправильно отображается контент!!!!!-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">                                                                <!--На мобильных неправильно отображается контент!!!!!-->
     <title>Mars</title>
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
     <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/css/swiper.min.css">
     <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="css/styles.css" type="text/css">
 </head>
@@ -47,10 +47,29 @@
         <div class="container">
             <div class="row">
                 <div class="slider col-xl-4 col-lg-4 col-md-4 col-sm-12">
-
-                    <h2 class="upper">Phantom</h2>
-                    <p class="text-gray">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eget euismod dolor.</p>
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide ">
+                                <h2 class="upper col-xl-12">Phantom</h2>
+                                <p class="text-gray">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eget euismod dolor.</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <h2 class="upper col-xl-12">Phantom</h2>
+                                <p class="text-gray">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eget euismod dolor.</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <h2 class="upper col-xl-12">Phantom</h2>
+                                <p class="text-gray">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eget euismod dolor.</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <h2 class="upper col-xl-12">Phantom</h2>
+                                <p class="text-gray">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eget euismod dolor.</p>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
                 </div>
+
                 <div class="col-xl-8 col-lg-8 col-md-8 row justify-content-center">
                     <div class="block-contain">
                         <img src="images/2-layers.png" class="dron" alt="Dron">
@@ -165,6 +184,7 @@
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <script src="bower_components/tether/dist/js/tether.min.js"></script>
 <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="js/swiper.min.js"></script>
 <script src="js/script.js"></script>
 </body>
 </html>
