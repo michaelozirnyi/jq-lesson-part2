@@ -166,6 +166,31 @@
   width: calc(100% - 250px);
 }
 
+.btn-menu {
+
+  background-color: $red;
+  width: 25px;
+  height: 12px;
+  border: none;
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  position: relative;
+  z-index: 5;
+  margin-left: 30px;
+
+  &:before {
+    content: "";
+    width: 25px;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    top: 3px;
+    left: 0;
+    z-index: 7;
+  }
+}
+
+
 /* ----Slider---- */
 .slider {
   padding: 0;
@@ -240,8 +265,4 @@
     width: 100%;
     left: -250px;
   }
-}
-
-@media (max-width: 500px) {
-
 }

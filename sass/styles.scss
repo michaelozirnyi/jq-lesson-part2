@@ -156,6 +156,9 @@ h5 {
       top: 28px;
       right: 192px;
     }
+    &:hover {
+      color: $red;
+    }
   }
 
   &:hover {
@@ -341,21 +344,30 @@ h5 {
 
 /*------------Start section---------------*/
 .start {
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-end;
+
   position: relative;
   z-index: 1;
   text-align: center;
+  min-height: 60vw;
 
   img {
-    max-width: 100%;
-    max-height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    width: 100%;
+    min-height: 100%;
   }
 
-  .absolut {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    z-index: 3;
+  .start-text {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    z-index: 5;
   }
 
   h1 {
@@ -396,11 +408,6 @@ h5 {
   .gener {
     padding-left: 48px;
   }
-
-
-
-
-
 }
 
 /*-------@media--------*/

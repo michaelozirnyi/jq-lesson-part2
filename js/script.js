@@ -1,12 +1,10 @@
 jQuery(function () {    /*jQuery(function ($) {            ???????*/
 
-
     var swiper = new Swiper('.swiper-container', {
         pagination: '.swiper-pagination',
         paginationClickable: true,
         direction: 'vertical'
     });
-
 
 
     $('.btn-menu').on('click', function(){
