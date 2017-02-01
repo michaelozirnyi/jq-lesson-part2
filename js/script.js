@@ -39,12 +39,12 @@ jQuery(function () {    /*jQuery(function ($) {            ???????*/
         $(".hiden-fly").fadeIn(700);
 
         var togBtn = $("#new-gener").text(),
-            btnText = "Products";
+            btnProductText = "Products";
 
-        if (togBtn == btnText) {
+        if (togBtn == btnProductText) {
             $("#new-gener").text(newTextBtn);
         } else {
-            $("#new-gener").text(btnText);
+            $("#new-gener").text(btnProductText);
             $(".hiden-fly").fadeOut(700);
         }
     });
